@@ -18,6 +18,7 @@ public:
     size_t size() override;
     typename baseList<T>::Node* begin() override;
     typename baseList<T>::Node* end() override;
+    T back();
     bool empty() override;
     doubleList& operator =(const doubleList&);
 
@@ -151,7 +152,7 @@ void doubleList<T>::clear() {
 
 template<typename T>
 size_t doubleList<T>::size() {
-    int sz = 0;
+    size_t sz = 0;
     typename baseList<T>::Node* temp = this->head;
     for (; temp != nullptr;) {
         ++sz;
@@ -163,6 +164,14 @@ size_t doubleList<T>::size() {
 template<typename T>
 typename baseList<T>::Node* doubleList<T>::end() {
     return this->tail;
+}
+
+template<typename T>
+T doubleList<T>::back() {
+    if (this->empty()) {
+        throw std::out_of_range("List is empty");
+    }
+    return this->tail->value;
 }
 
 template<typename T>

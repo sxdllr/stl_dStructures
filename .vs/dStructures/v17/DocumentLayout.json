@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Work\\Coding\\dStructures\\",
+  "WorkspaceRootPath": "D:\\Work\\Coding\\GitHub\\stl_dStructures\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C0D62DD-D318-46F0-AC61-9C57B428CAA5}|dStructures.vcxproj|D:\\Work\\Coding\\dStructures\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{1C0D62DD-D318-46F0-AC61-9C57B428CAA5}|dStructures.vcxproj|D:\\Work\\Coding\\GitHub\\stl_dStructures\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{1C0D62DD-D318-46F0-AC61-9C57B428CAA5}|dStructures.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -24,9 +24,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "main.cpp",
-              "DocumentMoniker": "D:\\Work\\Coding\\dStructures\\main.cpp",
+              "DocumentMoniker": "D:\\Work\\Coding\\GitHub\\stl_dStructures\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "D:\\Work\\Coding\\dStructures\\main.cpp",
+              "ToolTip": "D:\\Work\\Coding\\GitHub\\stl_dStructures\\main.cpp",
               "RelativeToolTip": "main.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",

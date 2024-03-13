@@ -10,6 +10,8 @@ int main() {
 	printSeparator();
 	test_vector();
 	printSeparator();
+	test_stack();
+	printSeparator();
 
 	return 0;
 }

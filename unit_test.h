@@ -2,6 +2,7 @@
 #include "myVector.h"
 #include "singleList.h"
 #include "doubleList.h"
+#include "myStack.h"
 
 void printSeparator() {
 	std::cout << "==================" << std::endl;
@@ -150,4 +151,31 @@ void test_vector() {
 		std::cout << vec_init_list[i] << " ";
 	}
 	std::cout << std::endl;
+}
+void test_stack() {
+	std::cout << "Stack" << std::endl;
+	std::cout << std::endl;
+
+	myStack<int> stack_empty;
+	std::cout << "Stack is empty?: " << stack_empty.empty() << std::endl;
+	std::cout << "Size: " << stack_empty.size() << std::endl;
+	std::cout << std::endl;
+
+	stack_empty.push(1);
+	stack_empty.push(2);
+	stack_empty.push(3);
+	stack_empty.push(4);
+	std::cout << "Stack elements: ";
+	for (; !stack_empty.empty();) {
+		std::cout << stack_empty.top() << " ";
+		stack_empty.pop();
+	}
+	std::cout << std::endl;
+
+	try {
+		stack_empty.pop();
+	}
+	catch (const std::out_of_range& e) {
+		std::cerr << "Exception caught: " << e.what() << std::endl;
+	}
 }
