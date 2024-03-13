@@ -129,6 +129,8 @@
   <ItemGroup>
     <ClInclude Include="baseList.h" />
     <ClInclude Include="doubleList.h" />
+    <ClInclude Include="myArray.h" />
+    <ClInclude Include="myStack.h" />
     <ClInclude Include="myVector.h" />
     <ClInclude Include="singleList.h" />
     <ClInclude Include="unit_test.h" />

@@ -1,5 +1,7 @@
 List of containers<br>
+`std::array`:myArray (enabled)<br>
 `std::vector`: myVector (enabled)<br>
+`std::deque`: myDeque (not enabled)<br>
 `std::forward_list`: sList (enabled)<br>
 `std::list`: dList (enabled)<br>
 `std::stack`: myStack (enabled)<br>

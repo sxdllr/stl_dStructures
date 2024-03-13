@@ -1,4 +1,5 @@
 #pragma once
+#include "myArray.h"
 #include "myVector.h"
 #include "singleList.h"
 #include "doubleList.h"
@@ -8,7 +9,7 @@ void printSeparator() {
 	std::cout << "==================" << std::endl;
 }
 void test_singleList() {
-	std::cout << "Single-linked list" << std::endl;
+	std::cout << "std::forward_list" << std::endl;
 	std::cout << std::endl;
 
 	singleList<int> sl1;
@@ -58,7 +59,7 @@ void test_singleList() {
 	sl3.print_list();
 }
 void test_doubleList() {
-	std::cout << "Double-linked list" << std::endl;
+	std::cout << "std::list" << std::endl;
 	std::cout << std::endl;
 
 	doubleList<int> dl1;
@@ -108,7 +109,7 @@ void test_doubleList() {
 	dl3.print_list();
 }
 void test_vector() {
-	std::cout << "Vector" << std::endl;
+	std::cout << "std::vector" << std::endl;
 	std::cout << std::endl;
 
 	myVector<int> vec_empty;
@@ -153,7 +154,7 @@ void test_vector() {
 	std::cout << std::endl;
 }
 void test_stack() {
-	std::cout << "Stack" << std::endl;
+	std::cout << "std::stack" << std::endl;
 	std::cout << std::endl;
 
 	myStack<int> stack_empty;
@@ -178,4 +179,68 @@ void test_stack() {
 	catch (const std::out_of_range& e) {
 		std::cerr << "Exception caught: " << e.what() << std::endl;
 	}
+}
+void test_array() {
+	std::cout << "std::array" << std::endl;
+	std::cout << std::endl;
+
+	myArray<int, 5> arr;
+	std::cout << "Is array empty?: " << arr.empty() << std::endl;
+	std::cout << "Array size: " << arr.size() << std::endl;
+
+	std::cout << std::endl;
+
+	arr.fill(10);
+	std::cout << "Filled array elements: ";
+	for (const auto& elem : arr)
+		std::cout << elem << " ";
+	std::cout << std::endl;
+
+	std::cout << "Array size: " << arr.size() << std::endl;
+	std::cout << "Maximum array size: " << arr.max_size() << std::endl;
+
+	std::cout << std::endl;
+
+	try {
+		arr.at(10);
+	}
+	catch (const std::out_of_range& e) {
+		std::cout << "Exception caught: " << e.what() << std::endl;
+	}
+
+	std::cout << std::endl;
+
+	myArray<int, 5> arr2 = arr;
+	std::cout << "Copied array: ";
+	for (const auto& elem : arr2)
+		std::cout << elem << " ";
+	std::cout << std::endl;
+
+	std::cout << std::endl;
+
+	myArray<int, 5> arr3;
+	arr3.fill(20);
+	std::cout << "Before swapping:" << std::endl;
+	std::cout << "Array 1: ";
+	for (const auto& elem : arr)
+		std::cout << elem << " ";
+	std::cout << std::endl;
+	std::cout << "Array 2: ";
+	for (const auto& elem : arr3)
+		std::cout << elem << " ";
+	std::cout << std::endl;
+
+	arr.swap(arr3);
+
+	std::cout << "After swapping:" << std::endl;
+	std::cout << "Array 1: ";
+	for (const auto& elem : arr)
+		std::cout << elem << " ";
+	std::cout << std::endl;
+	std::cout << "Array 2: ";
+	for (const auto& elem : arr3)
+		std::cout << elem << " ";
+	std::cout << std::endl;
+
+	std::cout << std::endl;
 }

@@ -15,8 +15,8 @@ public:
 
     myVector& operator=(const myVector&);
 
-    T* begin();
-    T* end();
+    const T* begin() const;
+    const T* end() const;
 
     size_t size() const;
     size_t max_size() const;
@@ -28,9 +28,9 @@ public:
     const T& operator[](size_t) const;
     T& operator[](size_t);
     T& at(const size_t&);
-    T& front();
-    T& back();
-    T* dat();
+    T& front() const;
+    T& back() const;
+    T* dat() const;
 
     void push_back(const T&);
     void pop_back();
@@ -100,12 +100,12 @@ myVector<T>& myVector<T>::operator=(const myVector<T>& other) {
 }
 
 template<typename T>
-T* myVector<T>::begin() {
+const T* myVector<T>::begin() const {
     return data;
 }
 
 template<typename T>
-T* myVector<T>::end() {
+const T* myVector<T>::end() const {
     return data + sz;
 }
 
@@ -179,17 +179,17 @@ T& myVector<T>::at(const size_t& index) {
 }
 
 template<typename T>
-T& myVector<T>::front() {
+T& myVector<T>::front() const{
     return data[0];
 }
 
 template<typename T>
-T& myVector<T>::back() {
+T& myVector<T>::back() const{
     return data[sz - 1];
 }
 
 template<typename T>
-T* myVector<T>::dat() {
+T* myVector<T>::dat() const{
     return data;
 }
 
